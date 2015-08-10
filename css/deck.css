@@ -655,7 +655,7 @@ padding-bottom: 50px;
 
     /*
         Now for fade in transition we have the oposite situation from the one
-        above.
+        above. 
 
         First after 4.5s delay we animate the transform property to move the hint
         into its correct position and after that we fade it in with opacity
