@@ -765,12 +765,8 @@
                     width = window.innerWidth * 0.3,
                     height= window.innerHeight * 0.3,
                     result = null;
-                    
-                if ( x < width ) {
-                    result = api.prev();
-                } else if (x > window.innerWidth - width ) {
-                    result = api.next();
-                } else if (y > window.innerHeight - height) {
+                
+                if (y > window.innerHeight - height) {
                     result = api.next()
                 } else if (y < width) {
                     result = api.prev();
