@@ -24,89 +24,118 @@
 <body>
 
   <div id="impress">
-      <div id="intro" class="step" data-x="0" data-y="0">
-        <img src="/assets/blockai-logo.png"><br><br>
-        <h3>Blockchain Publishing Platform</h3>
+      <div id="deck" class="step hide" data-y="0">
+        <img src="/assets/blockai-logo.png" width="500px"><br><br>
+        <h3>Seed+ Round Deck</h3>
+        <q>For: {{investor}}</q>
       </div>
 
-      <div id="problem" class="step" data-x="0" data-y="1000">
+      <div id="intro" class="step hide" data-y="1000">
+        <h3>Our mission is to bring real ownership and publishing to the web.</h3>
+      </div>
+
+      <div id="problem" class="step hide" data-y="2000">
         <h3>The Problem.</h3>
         <q><img src="/assets/the-internet.jpg" height="650px"></q>
       </div>
 
-      <div id="problem-ext" class="step" data-x="0" data-y="1500">
-        <q>There is no concept of ownership on the internet. Creators get fucked.</q>
+      <div id="problem-ext" class="step hide" data-y="2000" data-rotate-y="180">
+        <q>There is no concept of ownership on the internet. Creators get screwed.</q>
       </div>
 
-      <div id="problem-ext" class="step two" data-x="0" data-y="1600">
+      <div id="problem-ext2" class="step two hide" data-y="2100" data-rotate-y="180">
         <q>Media ownership is broken on the web. (headlines Facebook video, music..)</q>
       </div>
 
-      <div id="solution" class="step" data-x="0" data-y="2600">
-        <h3>Blockchain Publishing Platform.</h3>
-                <q>Decentralized identity.</q>
-                 <q>Publish once, entire world can use. Claim ownership.</q>
-                     <q>Smart contracts make sure the rights holders get their money.</q>
+      <div id="solution" class="step hide" data-x="0" data-y="3000">
+        <h3>The Solution:</h3>
+        <h2>Blockchain Publishing Platform.</h2>
+          <ul>
+            <li>Decentralized identity.</li>
+            <li>Publish once, entire world can use. Claim ownership.</li>
+            <li>Smart contracts make sure the rights holders get their money.</li>
+          </ul>
       </div>
 
-      <div id="how-it-works" class="step" data-x="0" data-y="3600">
-        <q>How does it work?</q>
+      <div id="how-it-works" class="step hide" data-x="0" data-y="4000">
+        <h3>How does it work?</h3>
       </div>
 
-      <div id="bitcoin-wallet" class="step" data-x="0" data-y="4600">
+      <div id="bitcoin-wallet" class="step hide" data-x="1000" data-y="4000">
         <img src="/assets/wallet.png">
         <h3>Create a Bitcoin ID Wallet.</h3>
       </div>
 
-      <div id="store" class="step" data-x="0" data-y="5700">
+      <div id="store" class="step hide" data-x="2000" data-y="4000">
         <q><i>(OPTIONAL)</i></q>
         <h3>Store your media with Bitstore.</h3>
       </div>
 
-      <div id="publish" class="step" data-x="0" data-y="6700">
+      <div id="publish" class="step hide" data-x="3000" data-y="4000">
         <img src="/assets/publish.png">
         <h3>Open Publish your media.</h3>
       </div>
 
-      <div id="distribute" class="step" data-x="0" data-y="7700">
+      <div id="distribute" class="step hide" data-x="4000" data-y="4000">
         <img src="/assets/distribute.png">
         <h3>Distribute your media.</h3>
       </div>
 
-      <div id="manage" class="step" data-x="0" data-y="8700">
+      <div id="manage" class="step hide" data-x="5000" data-y="4000">
         <img src="/assets/manage.png">
         <h3>Manage your assets.</h3>
       </div>
 
-      <div id="team" class="step" data-x="0" data-y="9700">
-        <h3>People</h3>
+      <!-- Competition? Business Model? -->
+
+      <div id="team" class="step hide" data-x="0" data-y="5000">
+        <h3>People</h3><br>
+        <p>
+        <img src="assets/nathan-lands.jpg"><img src="assets/william-cotton.jpg"><img src="assets/olivier-lalonde.jpg"><img src="assets/lila-strominger.jpg">
+        </p>
         <q>Team: Nathan Lands, William Cotton, Olivier Lalonde, Lila Strominger</q>
-        <q>Advisors: Zach Klein, Don Dodge, Paul McKellar, Kevin Chou, Kai Huang, Bill Tai, Vinny Lingham, Niero Gonzalez, Ron Williams</q>
-        <q>Scott & Cyan Banister, Sterling Ventures, Vectr Ventures, Social Starts, Brian Cartmell, Alex Banh</q>
+        <p>3 points each.</p>
       </div>
 
-      <div id="timeline" class="step" data-x="0" data-y="10700">
-        <q>Rased $560k Seed Round. milestones - risk.</q>
+      <div id="team-back" class="step hide" data-x="0" data-y="5000" data-rotate-y="180">
+        <h3> Backed up by </h3>
+        <p>Advisors: Zach Klein, Don Dodge, Paul McKellar, Kevin Chou, Kai Huang, Bill Tai, Vinny Lingham, Niero Gonzalez, Ron Williams</p>
+        <p>Scott & Cyan Banister, Sterling Ventures, Vectr Ventures, Social Starts, Brian Cartmell, Alex Banh</p>
       </div>
 
-      <div id="finance" class="step" data-x="0" data-y="11700">
-        <q>Raising $1M Equity Round to take product to market and hit milestones for Series A.</q>
+      <div id="timeline" class="step hide" data-x="0" data-y="6000">
+        <h3> Timeline </h3>
+        <q>Raised $560k Seed Round. Hit x milestone(s). Removed x risk.</q>
       </div>
 
-      <div id="final" class="step" data-x="0" data-y="12700">
-        <q>Blockai has dat potential!!</q>
+      <div id="finance" class="step hide" data-x="0" data-y="7000">
+        <h3> Finance </h3>
+        <q>Raising $1M Convertible Debt to take product to market, find product market fit and reach milestones for Series A.</q>
       </div>
 
-      <div id="appendix" class="step" data-x="0" data-y="13700">
-        <q>Appendix:</q>
+      <div id="final" class="step hide" data-x="0" data-y="8000">
+        <h2>Blockai has dat potential!!</h2>
+      </div>
+
+      <div id="appendix" class="step hide" data-x="0" data-y="9000">
+        <h3>Appendix:</h3>
         <li>Woot</li>
         <li>Woot woot</li>
       </div>
 
-      <div id="office" class="step" data-x="0" data-y="14700">
-         <h3>Japan Town</h3>
-         <q>Only $1,870 a month for X squarefeet.</q>
+      <div id="office" class="step hide" data-x="0" data-y="10000">
+         <h3>Our Office</h3>
+         <q>We have a 3 year lease on an office in Japan Town for only $1,870 a month for X squarefeet. Not a typo. :)</q>
         <img src="/assets/office/3.jpg">
+      </div>
+
+      <div id="github" class="step hide" data-x="0" data-y="11000">
+        <h3>Github Links</h3>
+          <ul>
+            <li>Lala</li>
+            <li>Lala</li>
+            <li>Lala</li>
+          </ul>
       </div>
 
       <!--Good option examples

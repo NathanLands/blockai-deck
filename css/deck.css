@@ -709,3 +709,7 @@ padding-bottom: 50px;
     Thanks for reading. I hope you enjoyed it at least as much as I enjoyed writing it
     for you.
 */
+
+/* fade out inactive slides */
+.step:not(.active) { opacity: 0.3; }
+.step.hide:not(.active) { opacity: 0; }
