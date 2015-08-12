@@ -27,7 +27,7 @@
       <div id="deck" class="step hide" data-y="0">
         <img src="/assets/blockai-logo.png" width="500px"><br><br>
         <h3>Seed+ Round Deck</h3>
-        <q>For: <%= investor %></q>
+        <p>For: <%= investor %></p>
       </div>
 
       <div id="intro" class="step hide" data-y="1000">
@@ -36,15 +36,15 @@
 
       <div id="problem" class="step hide" data-y="2000">
         <h3>The Problem.</h3>
-        <q><img src="/assets/the-internet.jpg" height="650px"></q>
+        <p><img src="/assets/the-internet.jpg" height="650px"></p>
       </div>
 
       <div id="problem-ext" class="step hide" data-y="2000" data-rotate-y="180">
-        <q>There is no concept of ownership on the internet. Creators get screwed.</q>
+        <p>There is no concept of ownership on the internet. Creators get screwed.</p>
       </div>
 
       <div id="problem-ext2" class="step two hide" data-y="2100" data-rotate-y="180">
-        <q>Media ownership is broken on the web. (headlines Facebook video, music..)</q>
+        <p>Media ownership is broken on the web. (headlines Facebook video, music..)</p>
       </div>
 
       <div id="solution" class="step hide" data-x="0" data-y="3000">
@@ -59,20 +59,26 @@
 
       <div id="how-it-works" class="step hide" data-x="0" data-y="4000">
         <h3>How does it work?</h3>
+              <video id="video1" autoplay>
+                <source src="assets/video.mp4" type="video/mp4"/>
+              </video>
       </div>
 
       <div id="bitcoin-wallet" class="step hide" data-x="1000" data-y="4000">
         <img src="/assets/wallet.png">
         <h3>Create a Bitcoin ID Wallet.</h3>
+        <img src="/assets/elephant.gif">
       </div>
 
       <div id="store" class="step hide" data-x="2000" data-y="4000">
-        <q><i>(OPTIONAL)</i></q>
+        <p><i>(OPTIONAL)</i></p>
+         <img src="/assets/monkey.gif">
         <h3>Store your media with Bitstore.</h3>
       </div>
 
       <div id="publish" class="step hide" data-x="3000" data-y="4000">
         <img src="/assets/publish.png">
+         <img src="/assets/dance.gif">
         <h3>Open Publish your media.</h3>
       </div>
 
@@ -93,28 +99,25 @@
         <p>
         <img src="assets/nathan-lands.jpg"><img src="assets/william-cotton.jpg"><img src="assets/olivier-lalonde.jpg"><img src="assets/lila-strominger.jpg">
         </p>
-        <q>Team: Nathan Lands, William Cotton, Olivier Lalonde, Lila Strominger</q>
+        <p>Team: Nathan Lands, William Cotton, Olivier Lalonde, Lila Strominger</p>
         <p>3 points each.</p>
+        <p> advisors company list at bottom </p>
       </div>
 
-      <div id="team-back" class="step hide" data-x="0" data-y="5000" data-rotate-y="180">
-        <h3> Backed up by </h3>
-        <p>Advisors: Zach Klein, Don Dodge, Paul McKellar, Kevin Chou, Kai Huang, Bill Tai, Vinny Lingham, Niero Gonzalez, Ron Williams</p>
-        <p>Scott & Cyan Banister, Sterling Ventures, Vectr Ventures, Social Starts, Brian Cartmell, Alex Banh</p>
+      <div id="milestones" class="step hide" data-x="0" data-y="6000">
+        <h3>Milestones</h3>
+        <p>Raised $560k Seed Round. Hit x milestone(s). Removed x risk.
+        Investors: Scott & Cyan Banister, Sterling Ventures, Vectr Ventures, Social Starts, Brian Cartmell, Alex Banh</p>
       </div>
 
-      <div id="timeline" class="step hide" data-x="0" data-y="6000">
-        <h3> Timeline </h3>
-        <q>Raised $560k Seed Round. Hit x milestone(s). Removed x risk.</q>
+      <div id="closing" class="step hide" data-x="0" data-y="8000">
+        <h2>Blockai has the potential to become the first</h2>
       </div>
 
       <div id="finance" class="step hide" data-x="0" data-y="7000">
-        <h3> Finance </h3>
-        <q>Raising $1M Convertible Debt to take product to market, find product market fit and reach milestones for Series A.</q>
-      </div>
-
-      <div id="final" class="step hide" data-x="0" data-y="8000">
-        <h2>Blockai has dat potential!!</h2>
+        <h3>Finance</h3>
+        <p>Raising $1M Convertible Debt to take product to market, find product market fit and reach milestones for Series A.</p>
+             <img src="/assets/money.gif">
       </div>
 
       <div id="appendix" class="step hide" data-x="0" data-y="9000">
@@ -125,7 +128,7 @@
 
       <div id="office" class="step hide" data-x="0" data-y="10000">
          <h3>Our Office</h3>
-         <q>We have a 3 year lease on an office in Japan Town for only $1,870 a month for X squarefeet. Not a typo. :)</q>
+         <p>We have a 3 year lease on an office in Japan Town for only $1,870 a month for X squarefeet. Not a typo. :)</p>
         <img src="/assets/office/3.jpg">
       </div>
 
@@ -170,6 +173,17 @@
 
     ga('create', 'UA-59278707-1', 'auto');
     ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript">
+      var videoStep = document.getElementById("how-it-works");
+var video = document.getElementById("video1");
+videoStep.addEventListener("impress:stepenter", function() {
+    video.play();
+}, false);
+videoStep.addEventListener("impress:stepleave", function() {
+    video.pause();
+}, false);
     </script>
 
   </body>
