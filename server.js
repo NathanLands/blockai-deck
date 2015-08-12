@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var app = express();
 var pg = require('pg');
 
-app.set('port', (process.env.PORT || '4000'));
+app.set('port', '4000');
 app.use(compression()); 
 app.use(express.static(path.join(__dirname, './')));
 app.use(bodyParser.json());
@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'ejs');
 
 
-var server = app.listen((process.env.PORT || '4000'), function () {
+var server = app.listen('4000', function () {
   console.log('Listening on port %d', server.address().port);
 });
 
