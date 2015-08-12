@@ -761,14 +761,21 @@
         document.addEventListener("touchstart", function ( event ) {
             if (event.touches.length === 1) {
                 var x = event.touches[0].clientX,
+                    y = event.touches[0].clientY,
                     width = window.innerWidth * 0.3,
+                    height= window.innerHeight * 0.3,
                     result = null;
                     
                 if ( x < width ) {
                     result = api.prev();
-                } else if ( x > window.innerWidth - width ) {
+                } else if (x > window.innerWidth - width ) {
                     result = api.next();
+                } else if (y > window.innerHeight - height) {
+                    result = api.next()
+                } else if (y < width) {
+                    result = api.prev();
                 }
+
                 
                 if (result) {
                     event.preventDefault();
