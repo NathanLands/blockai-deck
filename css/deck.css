@@ -268,6 +268,17 @@ color: #646464;
     box-sizing:         border-box;
 }
 
+.subtxt {
+font-family: "proxima-nova",sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+color: #2BB7E2;
+line-height: 22px;
+padding-bottom: 20px!important;
+margin-bottom: 0px!important; 
+}
+
 .impress-enabled .step {
     margin: 0;
     opacity: 0.3;
