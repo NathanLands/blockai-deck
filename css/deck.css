@@ -162,7 +162,7 @@ h2 {
   font-size: 48px;
   color: #646464;
   line-height: 61px;  
-  text-shadow: 0px 2px 4px rgba(0,0,0,0.30);
+  padding-bottom: 30px;
   }  
 
 h3 {
@@ -254,6 +254,26 @@ font-size: 18px;
 line-height: 28px;
 color: #646464;
 }
+
+.platform
+{
+padding: 5px;
+width: 180px;
+}
+
+.stake{
+font-family: "proxima-nova",sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+color: #626262;
+line-height: 42px;
+}
+
+.solution
+{
+
+width: 1500px;}
 
 .step {
     position: relative;

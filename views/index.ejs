@@ -40,25 +40,21 @@
       </div>
 
       <div id="problem-ext" class="step hide" data-y="2000" data-rotate-y="180">
-        <p>There is no concept of ownership on the web because it was never really possible before.</p>
+        <p>There is no concept of ownership on the web.</p>
           <h3><b>Creators</b> get screwed.</h3>
       </div>
 
       <div id="problem-ext2" class="step two hide" data-y="3000" data-rotate-y="180">
         <p class="rotate">The writing is on the wall.</p> 
-        <h3 class="rotate">A $<b>1 Trillion</b> dollar problem.</h3>
+        <h3 class="rotate">It's a $<b>1 Trillion</b> dollar problem.</h3>
                 <img class="no-ownership" width="600px" src="assets/no-ownership.jpg">
       </div>
 
       <div id="solution" class="step hide" data-y="4000">
-        <h3>The Solution:</h3>
+        <h3>The Solution.</h3>
         <h2>Blockchain Publishing Platform.</h2>
-          <ul>
-            <li>Decentralized identity to control your assets.</li>
-            <li>Publish to blockchain to claim ownership and create smart contract.</li>
-            <li>Publish once and the entire world can use.</li>
-            <li>Smart contracts make sure the rights holders get their money without accountants or lawyers.</li>
-          </ul>
+        <img class="platform" src="/assets/wallet.png"><img class="platform" src="/assets/publish.png"><img class="platform" src="/assets/distribute.png"><img class="platform" src="/assets/manage.png">
+        <p class="stake">Create Decentralized Identity. Store your data. Publish to the Blockchain. Distribute across the web. Manage your ownership stake.(**Replace with illustration, then use videos to show how each part functions**)</p>
       </div>
 
       <div id="how-it-works" class="step hide" data-y="5000">
@@ -66,31 +62,43 @@
       </div>
 
       <div id="bitcoin-wallet" class="step hide" data-y="6000" data-z="1000">
-        <img src="/assets/wallet.png">
         <h3>Create a Bitcoin ID Wallet.</h3>
+        <video width="640" height="480" id="video1" autoplay>
+          <source src="assets/video/video1.mp4" type="video/mp4"/>
+          <!-- include ogg etc. -->
+        </video>
       </div>
 
       <div id="bitstore" class="step hide" data-y="7000" data-z="2000">
         <h3>Store your media with Bitstore.</h3>
-        <video width="640" height="480" id="video1" autoplay>
-          <source src="assets/video.mp4" type="video/mp4"/>
+        <video width="640" height="480" id="video2" autoplay>
+          <source src="assets/video/video2.mp4" type="video/mp4"/>
           <!-- include ogg etc. -->
         </video>
       </div>
 
       <div id="openpublish" class="step hide" data-y="8000" data-z="3000">
-        <img src="/assets/publish.png">
         <h3>Open Publish your media.</h3>
+        <video width="640" height="480" id="video3" autoplay>
+          <source src="assets/video/video3.mp4" type="video/mp4"/>
+          <!-- include ogg etc. -->
+        </video>
       </div>
 
       <div id="distribute" class="step hide" data-y="9000" data-z="4000">
-        <img src="/assets/distribute.png">
         <h3>Distribute your media.</h3>
+        <video width="640" height="480" id="video4" autoplay>
+          <source src="assets/video/video4.mp4" type="video/mp4"/>
+          <!-- include ogg etc. -->
+        </video>
       </div>
 
       <div id="manage" class="step hide" data-y="10000" data-z="5000">
-        <img src="/assets/manage.png">
         <h3>Manage your assets.</h3>
+        <video width="640" height="480" id="video5" autoplay>
+          <source src="assets/video/video5.mp4" type="video/mp4"/>
+          <!-- include ogg etc. -->
+        </video>
       </div>
 
       <div id="competition" class="step hide" data-y="11000">
@@ -102,7 +110,7 @@
       <div id="user-acquisition" class="step hide" data-y="12000">
         <h3>User Acquisition</h3>
         <p>Expanding Pie showing memes -> photos -> books, music, video, etc.</p>
-        <p> Indicate how Artists + Bitcoiners + Engineers will help push us up. 
+        <p>Indicate how Artists + Bitcoiners + Engineers will help push us up. 
       </div>
 
       <div id="milestones" class="step hide" data-y="13000">
@@ -156,7 +164,8 @@
       </div>
 
        <div id="advisors" class="step hide" data-y="14000" data-rotate-y="180" data-z="4000">
-        <p class="advisors">Advisors & Investors from:<img src="assets/team/advisors.jpg"></p>
+        <p class="advisors">Advisors & Investors from:</p>
+        <img src="assets/team/advisors.jpg">
       </div>
 
 
@@ -265,13 +274,53 @@
     </script>
 
     <script type="text/javascript">
-      var videoStep = document.getElementById("bitstore");
-var video = document.getElementById("video1");
-videoStep.addEventListener("impress:stepenter", function() {
-    video.play();
+      var videoStep1 = document.getElementById("bitcoin-wallet");
+var video1 = document.getElementById("video1");
+videoStep1.addEventListener("impress:stepenter", function() {
+    video1.play();
 }, false);
-videoStep.addEventListener("impress:stepleave", function() {
-    video.pause();
+videoStep1.addEventListener("impress:stepleave", function() {
+    video1.pause();
+}, false);
+    </script>
+        <script type="text/javascript">
+      var videoStep2 = document.getElementById("bitstore");
+var video2 = document.getElementById("video2");
+videoStep2.addEventListener("impress:stepenter", function() {
+    video2.play();
+}, false);
+videoStep2.addEventListener("impress:stepleave", function() {
+    video2.pause();
+}, false);
+    </script>
+        <script type="text/javascript">
+      var videoStep3 = document.getElementById("openpublish");
+var video3 = document.getElementById("video3");
+videoStep3.addEventListener("impress:stepenter", function() {
+    video3.play();
+}, false);
+videoStep3.addEventListener("impress:stepleave", function() {
+    video3.pause();
+}, false);
+    </script>
+        <script type="text/javascript">
+      var videoStep4 = document.getElementById("distribute");
+var video4 = document.getElementById("video4");
+videoStep4.addEventListener("impress:stepenter", function() {
+    video4.play();
+}, false);
+videoStep4.addEventListener("impress:stepleave", function() {
+    video4.pause();
+}, false);
+    </script>
+        <script type="text/javascript">
+      var videoStep5 = document.getElementById("manage");
+var video5 = document.getElementById("video5");
+videoStep5.addEventListener("impress:stepenter", function() {
+    video5.play();
+}, false);
+videoStep5.addEventListener("impress:stepleave", function() {
+    video5.pause();
 }, false);
     </script>
 
