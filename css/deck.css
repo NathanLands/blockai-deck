@@ -75,29 +75,16 @@ table {
     border-spacing: 0;
 }
 
-/*
-    Now here is when interesting things start to appear.
-
-    We set up <body> styles with default font and nice gradient in the background.
-    And yes, there is a lot of repetition there because of -prefixes but we don't
-    want to leave anybody behind.
-*/
 body {
     font-family: "proxima-nova",sans-serif;
     min-height: 740px;
     line-height: 1.5;
-    background: white;
+    background: #fff;
 }
 
-/*
-    Now let's bring some text styles back ...
-*/
 b, strong { font-weight: bold }
 i, em { font-style: italic }
 
-/*
-    ... and give links a nice look.
-*/
 a {
     color: inherit;
     outline: 0;
@@ -105,9 +92,7 @@ a {
     color: #7244A8;
     padding: 0 0.1em;
     background: rgba(255,255,255,0.5);
-    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
     border-radius: 0.2em;
-
     -webkit-transition: 0.5s;
     -moz-transition:    0.5s;
     -ms-transition:     0.5s;
@@ -122,7 +107,6 @@ a:active {
     color: #9C7CC2;
     text-decoration: none;
     background: rgba(255,255,255,1);
-    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
 }
 
 button {
@@ -134,8 +118,10 @@ font-family: "proxima-nova",sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 22px;
-color: #FFFFFF;
+color: #fff;
 line-height: 27px;
+margin-left: 20px;
+margin-right: 20px;
 }
 
 button:hover, button:focus, button:active
@@ -144,12 +130,27 @@ button:hover, button:focus, button:active
   border: 1px solid #9C7CC2;
 }
 
+button a { 
+  color: #fff;
+  background: none;
+  text-decoration: none;
+}
+
+button a:hover, a:focus, a:active{ 
+  color: #fff;
+  background: none;
+}
+
+a:visited {
+  color: #9C7CC2;
+}
+
 h1 {
 font-family: "Helvetica",sans-serif;
 font-style: normal;
 font-weight: 600;
-font-size: 48px;
-color: #FFFFFF;
+font-size: 52px;
+color: #fff;
 line-height: 61px;
 text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
   }
@@ -161,6 +162,7 @@ h2 {
   font-size: 48px;
   color: #646464;
   line-height: 61px;  
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.30);
   }  
 
 h3 {
@@ -170,6 +172,18 @@ h3 {
   font-size: 48px;
   color: #7244A8;
   line-height: 46px;
+  padding-bottom: 30px;
+}  
+
+h3.highlight {
+  font-family: "futura-pt",sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  color: #7244A8;
+  line-height: 61px;
+  padding-bottom: 30px;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.30);
 }  
 
 h4 {
@@ -178,6 +192,7 @@ h4 {
   font-weight: 700;
   font-size: 36px;
   color: #646464;
+  padding-bottom: 30px;
   line-height: 46px;
 }
 
@@ -194,12 +209,25 @@ p {
 font-family: "proxima-nova",sans-serif;
 font-style: normal;
 font-weight: 400;
-font-size: 20px;
+font-size: 36px;
 color: #626262;
-line-height: 28px;
-padding-bottom: 50px;
+line-height: 46px;
+margin-bottom: 20px;
 }
 
+.investor{
+font-style: italic;
+}
+
+.confidential{
+font-family: "proxima-nova",sans-serif;
+font-style: bold;
+font-weight: 400;
+font-size: 14px;
+color: #626262;
+line-height: 28px;
+
+}
 
 .step {
     position: relative;
@@ -227,46 +255,6 @@ padding-bottom: 50px;
 
 .impress-enabled .step.active { opacity: 1 }
 
-.slide {
-    display: block;
-
-    width: 1024px;
-    height: 768px;
-    padding: 40px 60px;
-
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, .3);
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
-
-    color: rgb(102, 102, 102);
-    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
-
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 30px;
-    line-height: 36px;
-    letter-spacing: -1px;
-}
-
-#one {
-
-}
-
-#two {
-
-}
-
-.slide q {
-    display: block;
-    font-size: 50px;
-    line-height: 72px;
-
-    margin-top: 100px;
-}
-
-.slide q strong {
-    white-space: nowrap;
-}
 
 #title {
     padding: 0;
@@ -593,9 +581,9 @@ padding-bottom: 50px;
     bottom: 00px;
     background: #7244A8 ;
     font-family: "futura-pt",sans-serif;
-  font-style: normal;
-  font-weight: 700;
- color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
     text-align: center;
     padding: 20px;
     z-index: 100;
@@ -668,6 +656,7 @@ padding-bottom: 50px;
     transition:         opacity 1s 5s,         transform 0.5s 4.5s;
 }
 
+
 /*
     And as the last thing there is a workaround for quite strange bug.
     It happens a lot in Chrome. I don't remember if I've seen it in Firefox.
@@ -693,23 +682,105 @@ padding-bottom: 50px;
 .impress-enabled #impress { pointer-events: auto }
 #impress{text-align: center;}
 
+.hint2 {
+    /*
+        We hide the hint until presentation is started and from browsers not supporting
+        impress.js, as they will have a linear scrollable view ...
+    */
+    display: none;
+
+    /*
+        ... and give it some fixed position and nice styles.
+    */
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 00px;
+    background: #7244A8 ;
+    font-family: "futura-pt",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    z-index: 100;
+    font-size: 32px;
+
+    /*
+        By default we don't want the hint to be visible, so we make it transparent ...
+    */
+    opacity: 0;
+
+    /*
+        ... and position it below the bottom of the screen (relative to it's fixed position)
+    */
+    -webkit-transform: translateY(400px);
+    -moz-transform:    translateY(400px);
+    -ms-transform:     translateY(400px);
+    -o-transform:      translateY(400px);
+    transform:         translateY(400px);
+
+    /*
+        Now let's imagine that the hint is visible and we want to fade it out and move out
+        of the screen.
+
+        So we define the transition on the opacity property with 1s duration and another
+        transition on transform property delayed by 1s so it will happen after the fade out
+        on opacity finished.
+
+        This way user will not see the hint moving down.
+    */
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+    transition:         opacity 1s,         transform 0.5s 1s;
+}
+
 /*
-    There is one funny thing I just realized.
-
-    Thanks to this workaround above everything except #impress element is invisible
-    for click events. That means that the hint element is also not clickable.
-    So basically all of this transforms and delayed transitions trickery was probably
-    not needed at all...
-
-    But it was fun to learn about it, wasn't it?
+    Now we 'enable' the hint when presentation is initialized ...
 */
+.impress-enabled .hint2 { display: block }
 
 /*
-    That's all I have for you in this file.
-    Thanks for reading. I hope you enjoyed it at least as much as I enjoyed writing it
-    for you.
+    ... and we will show it when the first step (with id 'bored') is active.
 */
+.impress-on-thanks .hint2 {
+    /*
+        We remove the transparency and position the hint in its default fixed
+        position.
+    */
+    opacity: 1;
+
+    -webkit-transform: translateY(0px);
+    -moz-transform:    translateY(0px);
+    -ms-transform:     translateY(0px);
+    -o-transform:      translateY(0px);
+    transform:         translateY(0px);
+
+    /*
+        Now for fade in transition we have the oposite situation from the one
+        above. 
+
+        First after 4.5s delay we animate the transform property to move the hint
+        into its correct position and after that we fade it in with opacity
+        transition.
+    */
+    -webkit-transition: opacity 1s 2.5s, -webkit-transform 0.5s 0.5s;
+    -moz-transition:    opacity 1s 2.5s,    -moz-transform 0.5s 0.5s;
+    -ms-transition:     opacity 1s 2.5s,     -ms-transform 0.5s 0.5s;
+    -o-transition:      opacity 1s 2.5s,      -o-transform 0.5s 0.5s;
+    transition:         opacity 1s 2.5s,         transform 0.5s 0.5s;
+}
+
 
 /* fade out inactive slides */
 .step:not(.active) { opacity: 0.3; }
 .step.hide:not(.active) { opacity: 0; }
+
+.logo {padding-bottom: 0px;}
+
+/* Media Quieries */
+@media only screen and (max-width : 480px) {
+  
+}

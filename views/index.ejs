@@ -25,22 +25,23 @@
 
   <div id="impress">
       <div id="deck" class="step hide" data-y="0">
-        <img src="/assets/blockai-logo.png" width="500px"><br><br>
+        <img class="logo" src="/assets/blockai-logo.png" width="500px"><br><br>
         <h3>Seed+ Round Deck</h3>
-        <p>For: <%= investor %></p>
+        <p class="investor">For: <%= investor %></p>
       </div>
 
       <div id="intro" class="step hide" data-y="1000">
-        <h3>Our mission is to bring real ownership and publishing to the web.</h3>
+        <h3 class="highlight">Our mission is to bring real ownership and publishing to the web.</h3>
       </div>
 
       <div id="problem" class="step hide" data-y="2000">
         <h3>The Problem.</h3>
-        <p><img src="/assets/the-internet.jpg" height="650px"></p>
+        <p><img src="/assets/the-internet.jpg" height="600px"></p>
       </div>
 
       <div id="problem-ext" class="step hide" data-y="2000" data-rotate-y="180">
-        <p>There is no concept of ownership on the internet. Creators get screwed.</p>
+        <p>There is no concept of ownership on the web because it was never really possible before.</p>
+          <h3>Creators get screwed.</h3>
       </div>
 
       <div id="problem-ext2" class="step two hide" data-y="3000" data-rotate-y="180">
@@ -111,13 +112,7 @@
         <p>Investors: Scott & Cyan Banister, Sterling Ventures, Vectr Ventures, Social Starts, Brian Cartmell, Alex Banh</p>
       </div>
 
-      <div id="finance" class="step hide" data-y="14000">
-        <h3>Seed+ Round</h3>
-        <p>Raising $1M Convertible Debt to take product to market, find product market fit and reach milestones for Series A.</p>
-        <p>Seed+ Round gives us ~X months runway.</p>
-      </div>
-
-      <div id="team" class="step hide" data-y="15000">
+      <div id="team" class="step hide" data-y="14000">
         <h3>People</h3><br>
         <p>
         <img src="assets/nathan-lands.jpg"><img src="assets/william-cotton.jpg"><img src="assets/olivier-lalonde.jpg"><img src="assets/lila-strominger.jpg">
@@ -127,23 +122,34 @@
         <p> advisors company list at bottom </p>
       </div>
 
-      <div id="closing" class="step hide" data-y="16000" data-z="2000">
-        <h3>Blockai has the potential to revolutionize media publishing, becoming the main tool everyone uses to publish and manage their creative assets.</h3>
+      <div id="closing" class="step hide" data-y="15000" data-z="2000">
+        <h3 class="highlight">Blockai has the potential to revolutionize media publishing, becoming the main tool everyone uses to publish and manage their creative assets.</h3>
       </div>
 
-      <div id="appendix" class="step hide" data-y="17000">
+      <div id="finance" class="step hide" data-y="16000">
+        <h3>Seed+ Round</h3>
+        <p>Raising $1M Convertible Debt to find product market fit and reach milestones for Series A.</p>
+        <p>Seed+ Round gives us ~X months runway.</p>
+      </div>
+
+      <div id="thanks" class="step hide" data-y="17000">
+        <h3>Thank you.</h3>
+        <p> Email <a href="mailto:nathan@blockai.com?Subject=Seed+ Round">nathan@blockai.com</a> to discuss our round.</p>
+      </div>
+
+      <div id="appendix" class="step hide" data-y="18000">
         <h3>Appendix:</h3>
         <li>Woot</li>
         <li>Woot woot</li>
       </div>
 
-      <div id="office" class="step hide" data-y="18000">
+      <div id="office" class="step hide" data-y="19000">
          <h3>Our Office</h3>
-         <p>We have a 3 year lease on an office in Japan Town for only $1,870 a month for X squarefeet. Not a typo. :)</p>
+         <p>We have an amazing deal on a 3 year lease for a private office in Japan Town for only $1,870 a month including lobby, kitchen and 6 rooms. Not a typo. :)</p>
         <img src="/assets/office/3.jpg">
       </div>
 
-      <div id="github" class="step hide" data-y="19000">
+      <div id="github" class="step hide" data-y="20000">
         <h3>Github Links</h3>
           <ul>
             <li>Lala</li>
@@ -152,7 +158,7 @@
           </ul>
       </div>
 
-      <div id="proceeds" class="step hide" data-y="20000">
+      <div id="proceeds" class="step hide" data-y="21000">
         <h3>Use of Proceeds</h3>
           <ul>
             Will primarily be used for engineer salaries. 
@@ -164,7 +170,7 @@
           </ul>
       </div>
 
-            <div id="sidechains" class="step hide" data-y="21000">
+            <div id="sidechains" class="step hide" data-y="22000">
         <h3>Blockchains / Sidechains</h3>
           <ul>
             <li>We expect <strong>Bitcoin</strong> to be the main crypto-currency for the foreseeable future, but can adjust if that proves to be false.</li>
@@ -181,12 +187,16 @@
     </div>
 
     <div class="hint">
-    <h1 class="hint">Use arrow keys or slide down to navigate.</h1>
+      <h1 class="hint">Use arrow keys or slide down to navigate.</h1>
+    </div>
+
+    <div class="hint2">
+      <h1 class="hint2">Continue on for the Appendix.</h1>
     </div>
 
     <script>
       if ("ontouchstart" in document.documentElement) { 
-      document.querySelector(".hint").innerHTML = "<h1>Tap on the top or bottom to navigate</h1>";
+      document.querySelector(".hint").innerHTML = "<h1>Tap on the top or bottom to navigate.</h1>";
       }
     </script>
 
