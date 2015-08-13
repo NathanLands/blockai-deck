@@ -209,24 +209,50 @@ p {
 font-family: "proxima-nova",sans-serif;
 font-style: normal;
 font-weight: 400;
-font-size: 36px;
+font-size: 32px;
 color: #626262;
 line-height: 46px;
 margin-bottom: 20px;
 }
 
+li {
+ font-family: "proxima-nova",sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+color: #626262;
+line-height: 46px;
+}
+
 .investor{
 font-style: italic;
+font-family: "proxima-nova",sans-serif;
+font-weight: 400;
+font-size: 22px;
+color: #626262;
+line-height: 32px;
 }
 
 .confidential{
 font-family: "proxima-nova",sans-serif;
 font-style: bold;
 font-weight: 400;
-font-size: 14px;
-color: #626262;
+font-size: 12px;
 line-height: 28px;
+color: #ddd;
+position: absolute;
+bottom: 0;
+text-align: center;
+}
 
+.advisors
+{
+font-family: "proxima-nova",sans-serif;
+font-style: italic;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+color: #646464;
 }
 
 .step {
@@ -293,20 +319,21 @@ line-height: 28px;
 
     Let's move to 'big thoughts' with centered text and custom font sizes.
 */
-#big {
-    width: 600px;
+#problem-ext {
+    width: 900px;
     text-align: center;
     font-size: 60px;
     line-height: 1;
 }
 
-#big b {
+#problem-ext b {
     display: block;
-    font-size: 250px;
-    line-height: 250px;
+    font-size: 200px;
+    line-height: 200px;
+    text-align: center;
 }
 
-#big .thoughts {
+#problem-ext .thoughts {
     font-size: 90px;
     line-height: 150px;
 }
@@ -352,20 +379,23 @@ line-height: 28px;
 /*
     ... 'rotating' to rotate a quarter of a second later ...
 */
-#ing.present .rotating {
-    -webkit-transform: rotate(-10deg);
-    -moz-transform:    rotate(-10deg);
-    -ms-transform:     rotate(-10deg);
-    -o-transform:      rotate(-10deg);
-    transform:         rotate(-10deg);
-
-    -webkit-transition-delay: 0.25s;
-    -moz-transition-delay:    0.25s;
-    -ms-transition-delay:     0.25s;
-    -o-transition-delay:      0.25s;
-    transition-delay:         0.25s;
+.rotate {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform:    rotate(-3deg);
+    -ms-transform:     rotate(-3deg);
+    -o-transform:      rotate(-3deg);
+    transform:         rotate(-3deg);
 }
 
+.rotate-text {
+  vertical-align: center;
+  padding-top: 125px;
+}
+
+.no-ownership
+{
+  float: right;
+}
 /*
     ... and 'scaling' to scale down after another quarter of a second.
 */
@@ -779,6 +809,10 @@ line-height: 28px;
 .step.hide:not(.active) { opacity: 0; }
 
 .logo {padding-bottom: 0px;}
+
+#problem-ext2{
+  width: 1200px;
+}
 
 /* Media Quieries */
 @media only screen and (max-width : 480px) {
