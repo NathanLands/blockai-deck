@@ -1,33 +1,32 @@
-/*                                                          
-                                                           
-__________.__                 __           .__  _______________  ____ .________
-\______   \  |   ____   ____ |  | _______  |__| \_____  \   _  \/_   ||   ____/
- |    |  _/  |  /  _ \_/ ___\|  |/ /\__  \ |  |  /  ____/  /_\  \|   ||____  \ 
- |    |   \  |_(  <_> )  \___|    <  / __ \|  | /       \  \_/   \   |/       \
- |______  /____/\____/ \___  >__|_ \(____  /__| \_______ \_____  /___/______  /
-        \/                 \/     \/     \/             \/     \/           \/             
+/*
+    So you like the style of impress.js demo?
+    Or maybe you are just curious how it was done?
 
-Blockai Style Guide 2015. 
+    You couldn't find a better place to find out!
 
-##colors##
-Logo & Ascents
-Dark Cyan: #1A7590
-Light Cyan: #2BB7E2
-Base Cyan: #9BE0F3
+    Welcome to the stylesheet impress.js demo presentation.
 
-Headers & Text
-Dark Grey #646464
+    Please remember that it is not meant to be a part of impress.js and is
+    not required by impress.js.
+    I expect that anyone creating a presentation for impress.js would create
+    their own set of styles.
 
-Backgrounds, Buttons and Illustrations
-Light Purple: #9C7CC2
-Dark Purple: #7244A8 
+    But feel free to read through it and learn how to get the most of what
+    impress.js provides.
 
-##fonts##
-Futura PT Heavy for Headers. 
-Proxima Nova Regular for Text & Buttons.
-Helvetica(for hero CTA only)
+    And let me be your guide.
 
- */     
+    Shall we begin?
+*/
+
+
+/*
+    We start with a good ol' reset.
+    That's the one by Eric Meyer http://meyerweb.com/eric/tools/css/reset/
+
+    You can probably argue if it is needed here, or not, but for sure it
+    doesn't do any harm and gives us a fresh start.
+*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -56,7 +55,7 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 body {
-    line-height: 1;.5
+    line-height: 1;
 }
 ol, ul {
     list-style: none;
@@ -83,10 +82,16 @@ table {
     want to leave anybody behind.
 */
 body {
-    font-family: "proxima-nova",sans-serif;
+    font-family: 'PT Sans', sans-serif;
     min-height: 740px;
-    line-height: 1.5;
-    background: white;
+
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
 }
 
 /*
@@ -100,9 +105,7 @@ i, em { font-style: italic }
 */
 a {
     color: inherit;
-    outline: 0;
-    text-decoration: underline;
-    color: #7244A8;
+    text-decoration: none;
     padding: 0 0.1em;
     background: rgba(255,255,255,0.5);
     text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
@@ -116,90 +119,49 @@ a {
 }
 
 a:hover,
-a:focus,
-a:active {
-    outline: 0;
-    color: #9C7CC2;
-    text-decoration: none;
+a:focus {
     background: rgba(255,255,255,1);
     text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
 }
 
-button {
-background: #7244A8;
-border: 1px solid #7244A8;
-border-radius: 2px;
-padding: 7px 25px;
-font-family: "proxima-nova",sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 22px;
-color: #FFFFFF;
-line-height: 27px;
+/*
+    Because the main point behind the impress.js demo is to demo impress.js
+    we display a fallback message for users with browsers that don't support
+    all the features required by it.
+
+    All of the content will be still fully accessible for them, but I want
+    them to know that they are missing something - that's what the demo is
+    about, isn't it?
+
+    And then we hide the message, when support is detected in the browser.
+*/
+
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border: 1px solid #E4C652;
+    border-radius: 10px;
+    background: #EEDC94;
 }
 
-button:hover, button:focus, button:active
-{
-  background: #9C7CC2;
-  border: 1px solid #9C7CC2;
+.fallback-message p {
+    margin-bottom: 10px;
 }
 
-h1 {
-font-family: "Helvetica",sans-serif;
-font-style: normal;
-font-weight: 600;
-font-size: 48px;
-color: #FFFFFF;
-line-height: 61px;
-text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
-  }
-
-h2 {
-  font-family: "futura-pt",sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  color: #646464;
-  line-height: 61px;  
-  }  
-
-h3 {
-  font-family: "futura-pt",sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  color: #7244A8;
-  line-height: 46px;
-}  
-
-h4 {
-  font-family: "futura-pt",sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  color: #646464;
-  line-height: 46px;
+.impress-supported .fallback-message {
+    display: none;
 }
 
-h5 {
-font-family: "futura-pt",sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-color: #2BB7E2;
-line-height: 31px;
-}
+/*
+    Now let's style the presentation steps.
 
-p {
-font-family: "proxima-nova",sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-color: #626262;
-line-height: 28px;
-padding-bottom: 50px;
-}
-
+    We start with basics to make sure it displays correctly in everywhere ...
+*/
 
 .step {
     position: relative;
@@ -212,8 +174,17 @@ padding-bottom: 50px;
     -ms-box-sizing:     border-box;
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
+
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 48px;
+    line-height: 1.5;
 }
 
+/*
+    ... and we enhance the styles for impress.js.
+
+    Basically we remove the margin and make inactive steps a little bit transparent.
+*/
 .impress-enabled .step {
     margin: 0;
     opacity: 0.3;
@@ -227,11 +198,19 @@ padding-bottom: 50px;
 
 .impress-enabled .step.active { opacity: 1 }
 
+/*
+    These 'slide' step styles were heavily inspired by HTML5 Slides:
+    http://html5slides.googlecode.com/svn/trunk/styles.css
+
+    ;)
+
+    They cover everything what you see on first three steps of the demo.
+*/
 .slide {
     display: block;
 
-    width: 1024px;
-    height: 768px;
+    width: 900px;
+    height: 700px;
     padding: 40px 60px;
 
     background-color: white;
@@ -248,14 +227,6 @@ padding-bottom: 50px;
     letter-spacing: -1px;
 }
 
-#one {
-
-}
-
-#two {
-
-}
-
 .slide q {
     display: block;
     font-size: 50px;
@@ -267,6 +238,17 @@ padding-bottom: 50px;
 .slide q strong {
     white-space: nowrap;
 }
+
+/*
+    And now we start to style each step separately.
+
+    I agree that this may be not the most efficient, object-oriented and
+    scalable way of styling, but most of steps have quite a custom look
+    and typography tricks here and there, so they had to be styled separately.
+
+    First is the title step with a big <h1> (no room for padding) and some
+    3D positioning along Z axis.
+*/
 
 #title {
     padding: 0;
@@ -407,10 +389,21 @@ padding-bottom: 50px;
     font-size: 78px;
 }
 
+/*
+    There is nothing really special about 'use the source, Luke' step, too,
+    except maybe of the Yoda background.
 
+    As you can see below I've 'hard-coded' it in data URL.
+    That's not the best way to serve images, but because that's just this one
+    I decided it will be OK to have it this way.
+
+    Just make sure you don't blindly copy this approach.
+*/
 #source {
     width: 700px;
     padding-bottom: 300px;
+
+    /* Yoda Icon :: Pixel Art from Star Wars http://www.pixeljoint.com/pixelart/1423.htm */
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAMAAACwUBm+AAAAAXNSR0IArs4c6QAAAKtQTFRFsAAAvbWSLUUrLEQqY1s8UYJMqJ1vNTEgOiIdIzYhjIFVLhsXZ6lgSEIsP2U8JhcCVzMsSXZEgXdOO145XJdWOl03LzAYMk4vSXNExr+hwcuxRTs1Qmk+RW9Am49eFRANQz4pUoNMQWc+OSMDTz0wLBsCNVMxa2NBOyUDUoNNSnlEWo9VRGxAVzYFl6tXCggHbLNmMUIcHhwTXkk5f3VNRT8wUT8xAAAACQocRBWFFwAAAAF0Uk5TAEDm2GYAAAPCSURBVHja7d3JctNAFIZRMwRCCGEmzPM8z/D+T8bu/ptbXXJFdij5fMt2Wuo+2UgqxVmtttq5WVotLzBgwIABAwYMGDCn0qVqbo69psPqVpWx+1XG5iaavF8wYMCAAQMGDBgwi4DJ6Y6qkxB1HNlcN3a92gbR5P2CAQMGDBgwYMCAWSxMlrU+UY5yu2l9okfV4bAxUVbf7TJnAwMGDBgwYMCAAbMLMHeqbGR82Zy+VR1Ht81nVca6R+UdTLaU24Ruzd3qM/e4yjnAgAEDBgwYMGDA7AJMd1l/3NRdVGcj3eX/2WEhCmDGxnM7yqygu8XIPjJj8iN/MGDAgAEDBgwYMAuDGb8q0RGlLCHLv1t9qDKWn3vdNHVuEI6HPaxO9Jo3GDBgwIABAwYMmIXBdC9ShGgMk+XnkXUeuGcsP/e1+lhNnZsL/G5Vs3OAAQMGDBgwYMCAWSxMR3SzOmraG5atdy9wZKzb+vg16qyqe2FltbnAgAEDBgwYMGDALAxmTJSuN3WA76rnVca6GTnemGN1WoEBAwYMGDBgwIBZGMxUomy4+xO899V4LAg5Xnc2MGDAgAEDBgwYMGA218Wq+2K1LDqvY9xZu8zN8fICdM6btYABAwYMGDBgwIABMzfH0+pGU5afze2tXebmeAfVz+p8BQYMGDBgwIABAwbMPBzZ+oWmfJrln1273FhkbHzee9WWbw7AgAEDBgwYMGDALAKm43hcdctKgblcPamOhuXnXlY5Xs6bsW4FGyQCAwYMGDBgwIABswiYMceZKgvMo+h8mrHLTdn676rj+FEFoTtHd8MwOxEYMGDAgAEDBgyYRcBM5UhXqiymW3R3c9ARhWO/OmjqfjVZy+xEYMCAAQMGDBgwYBYG073OnCV0RFNhMhaOa9WfKmOB6XjHMN1tQmaAAQMGDBgwYMCA2VWY7vXjz1U4croAzgPztwIDBgwYMGDAgAEDZhswh035NBw59Dww3RgYMGDAgAEDBgwYMJuD6f4tXT7NUqfCdBvZLkxXdgQGDBgwYMCAAQNmt2DGj8WzwAfV/w7T/aq7mxwwYMCAAQMGDBgwuwqTOo7uTwTngflSzQ3TdaJvAwEDBgwYMGDAgAED5gSvgbyo5oHZ4Pc+gwEDBgwYMGDAgAEzhOm+5G0qTGaAAQMGDBgwYMCAAXNaMOcnls3tNwWm+zRzp54NDBgwYMCAAQMGDJh5YNL36k1TLuGvVq+qnKMbS5n7tulT9asCAwYMGDBgwIABA2ZumKuztLnjgQEDBgwYMGDAgNl5mH/4/ltKA6vBNAAAAABJRU5ErkJggg==);
     background-position: bottom right;
     background-repeat: no-repeat;
@@ -590,16 +583,16 @@ padding-bottom: 50px;
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 00px;
-    background: #7244A8 ;
-    font-family: "futura-pt",sans-serif;
-  font-style: normal;
-  font-weight: 700;
- color: #fff;
+    bottom: 200px;
+
+    background: rgba(0,0,0,0.5);
+    color: #EEE;
     text-align: center;
+
+    font-size: 50px;
     padding: 20px;
+
     z-index: 100;
-    font-size: 32px;
 
     /*
         By default we don't want the hint to be visible, so we make it transparent ...
@@ -640,7 +633,7 @@ padding-bottom: 50px;
 /*
     ... and we will show it when the first step (with id 'bored') is active.
 */
-.impress-on-deck .hint {
+.impress-on-bored .hint {
     /*
         We remove the transparency and position the hint in its default fixed
         position.
@@ -655,7 +648,7 @@ padding-bottom: 50px;
 
     /*
         Now for fade in transition we have the oposite situation from the one
-        above. 
+        above.
 
         First after 4.5s delay we animate the transform property to move the hint
         into its correct position and after that we fade it in with opacity
@@ -691,7 +684,6 @@ padding-bottom: 50px;
 */
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
-#impress{text-align: center;}
 
 /*
     There is one funny thing I just realized.
@@ -709,7 +701,3 @@ padding-bottom: 50px;
     Thanks for reading. I hope you enjoyed it at least as much as I enjoyed writing it
     for you.
 */
-
-/* fade out inactive slides */
-.step:not(.active) { opacity: 0.3; }
-.step.hide:not(.active) { opacity: 0; }

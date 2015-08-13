@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 </head>
 
-<body>
+<body class="impress-not-supported">
 
   <div id="impress">
       <div id="deck" class="step hide" data-y="0">
@@ -179,6 +179,16 @@
         <span class="footnote">* beat that, prezi ;)</span>
       </div>-->
     </div>
+
+    <div class="hint">
+    <h1 class="hint">Use arrow keys or slide down to navigate.</h1>
+    </div>
+
+    <script>
+      if ("ontouchstart" in document.documentElement) { 
+      document.querySelector(".hint").innerHTML = "<p>Tap on the top or bottom to navigate</p>";
+      }
+    </script>
 
     <script src="js/impress.js"></script>
     <script>impress().init();</script>
